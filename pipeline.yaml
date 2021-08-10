@@ -24,12 +24,11 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
-    backendServiceArm: '$(subscription)'
-    backendAzureRmResourceGroupName: '$(resourceGroup)'
-    backendAzureRmStorageAccountName: '$(storageAccount)'
-    backendAzureRmContainerName: '$(container)'
-    backendAzureRmKey: '$(tfstateFile)'
+    backendServiceArm: 'pay as you go'
+    backendAzureRmResourceGroupName: 'terraform-rg-remotestate'
+    backendAzureRmStorageAccountName: 'terraformremote73260'
+    backendAzureRmContainerName: 'kla'
+    backendAzureRmKey: 'terraform.tfstate'
 
 - task: TerraformTaskV1@0
   displayName: terraform plan -out=tfplan
