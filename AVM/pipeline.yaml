@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: ado-spn-connection-to-azure
+  subscription: Pay-As-You-Go (945cfaa1-11b8-4f18-8bb1-0763430b4565)
   resourceGroup: terraform-rg-remotestate
   storageAccount: terraformremote73260
   container: kla
