@@ -19,11 +19,12 @@ steps:
   inputs:
     terraformVersion: '1.0.3'
 
-- task: TerraformTaskV1@0
-  displayName: terraform init
+- task: TerraformTaskV2@2
+  displayName: init
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/AVM'
     backendServiceArm: 'pay as you go'
     backendAzureRmResourceGroupName: 'terraform-rg-remotestate'
     backendAzureRmStorageAccountName: 'terraformremote73260'
