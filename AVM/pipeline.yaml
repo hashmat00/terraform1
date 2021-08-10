@@ -24,7 +24,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/avm'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: '$(subscription)'
     backendAzureRmResourceGroupName: '$(resourceGroup)'
     backendAzureRmStorageAccountName: '$(storageAccount)'
@@ -36,7 +36,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/avm'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: '-out=tfplan'
     # commandOptions: '-detailed-exitcode -out=tfplan'
     environmentServiceNameAzureRM: '$(subscription)'
@@ -44,7 +44,7 @@ steps:
 - task: PowerShell@2
   displayName: detect any terraform change
   inputs:
-    workingDirectory: '$(System.DefaultWorkingDirectory)/avm'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     targetType: 'inline'
     script: |
       # Write-Host "LASTEXITCODE : $LASTEXITCODE"
@@ -67,6 +67,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/avm'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: 'tfplan'
     environmentServiceNameAzureRM: '$(subscription)'
