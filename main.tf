@@ -9,7 +9,7 @@ module "vm" {
   vnet  =       "test-vnet"
   subnet =      "default"
 }
-module "vm" {
+module "vm2" {
   source              = "./modules/vm"
   # source              = "Azure/vnet/azurerm"
   rg-name =     "hm-test2"
