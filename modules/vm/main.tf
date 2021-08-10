@@ -33,12 +33,14 @@ resource "azurerm_network_interface" "nic" {
     private_ip_address_allocation = "dynamic"
     #public_ip_address_id          = "${azurerm_public_ip.test.id}"
   }
+  tags = var.tags
 }
 
 resource "azurerm_network_security_group" "nsg" {
   name                = "${var.vm-name}-nsg"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
+  tags = var.tags
 
   security_rule {
     name                       = "allow-storage"
