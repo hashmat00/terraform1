@@ -24,7 +24,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/AVM'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'pay as you go'
     backendAzureRmResourceGroupName: 'terraform-rg-remotestate'
     backendAzureRmStorageAccountName: 'terraformremote73260'
