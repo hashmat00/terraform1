@@ -1,6 +1,6 @@
 
-
-module "vm" {
+#use module to create new vm with name and also create new RG
+module "vm1" {
   source              = "./modules/vm"
   # source              = "Azure/vnet/azurerm"
   rg-name =     "hm-test1"
@@ -9,6 +9,8 @@ module "vm" {
   vnet  =       "test-vnet"
   subnet =      "default"
 }
+
+#call again the module to create second vm with different name and RG but vnet/vnetRG/subnet will be same
 module "vm2" {
   source              = "./modules/vm"
   # source              = "Azure/vnet/azurerm"
