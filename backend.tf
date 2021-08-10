@@ -1,6 +1,5 @@
 terraform {
     backend "azurerm" {
-
-        
+           
     }
 }
