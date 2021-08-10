@@ -15,9 +15,9 @@ variables:
 steps:
 
 - task: TerraformInstaller@0
-  displayName: install Terraform v1.0.3
+  displayName: install Terraform v1.0.4
   inputs:
-    terraformVersion: '1.0.3'
+    terraformVersion: '1.0.4'
 
 - task: TerraformTaskV2@2
   displayName: init
@@ -25,11 +25,11 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    backendServiceArm: 'pay as you go'
-    backendAzureRmResourceGroupName: 'terraform-rg-remotestate'
-    backendAzureRmStorageAccountName: 'terraformremote73260'
-    backendAzureRmContainerName: 'kla'
-    backendAzureRmKey: 'terraform.tfstate'
+    backendServiceArm: '$(subscription)'
+    backendAzureRmResourceGroupName: '$(resourceGroup)'
+    backendAzureRmStorageAccountName: '$(storageAccount)'
+    backendAzureRmContainerName: '$(container)'
+    backendAzureRmKey: '$(tfstateFile)'
 
 - task: TerraformTaskV1@0
   displayName: terraform plan -out=tfplan
