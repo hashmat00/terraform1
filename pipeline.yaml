@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: Pay-As-You-Go (945cfaa1-11b8-4f18-8bb1-0763430b4565)
+  subscription: pay as you go
   resourceGroup: terraform-rg-remotestate
   storageAccount: terraformremote73260
   container: kla
