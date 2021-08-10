@@ -2,11 +2,7 @@
 resource "azurerm_resource_group" "rg" {
   name =  var.rg-name
   location = var.location
-  tags = {
-    environment = "test"
-    project   = "AVM"
-    owner     = "kla"
-   }
+  tags = var.tags
 }
 
 data "azurerm_resource_group" "vnet-rg" {

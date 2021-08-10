@@ -8,6 +8,11 @@ module "vm1" {
   vnet-rg =     "test"
   vnet  =       "test-vnet"
   subnet =      "default"
+  tags = {
+    environment = "test"
+    project   = "AVM"
+    owner     = "kla"
+   }
 }
 
 #call again the module to create second vm with different name and RG but vnet/vnetRG/subnet will be same

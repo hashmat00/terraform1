@@ -69,12 +69,7 @@ variable "subnet" {
 #   description = "virtual network security group name"
 # }
 
-# variable "tags" {
-#   type = map(string)
-#   description = "tags for resources"
-#   default = {
-#     environment = "dev"
-#     cost-center = ""
-#     Project = "AVM"
-#   }
-# }
+ variable "tags" {
+  type = map(string)
+  description = "tags for resources"
+ }
