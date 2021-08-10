@@ -5,10 +5,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: Visual Studio Enterprise(17b12858-3960-4e6f-a663-a06fdae23428)
-  resourceGroup: resourcegroup-tfstate
-  storageAccount: terraformtfstateskip
-  container: tfstate
+  subscription: Pay-As-You-Go (945cfaa1-11b8-4f18-8bb1-0763430b4565)
+  resourceGroup: terraform-rg-remotestate
+  storageAccount: terraformremote73260
+  container: kla
   tfstateFile: terraform.tfstate
   anyTfChanges: false
 
